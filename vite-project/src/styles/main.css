@@ -1,16 +1,22 @@
-@import url("./global.style.css");
-@import url("./pages/home/sections-css/header.css");
-@import url("./pages/home/sections-css/hero.css");
-@import url("./pages/home/sections-css/about.css");
-@import url("./pages/home/sections-css/galery.css");
-@import url("./pages/home/sections-css/artist.css");
+@import url("./pages/home/header.css");
+@import url("./pages/home/hero.css");
+@import url("./pages/home/about.css");
+@import url("./pages/home/galery.css");
+@import url("./pages/home/artist.css");
 @import url("./pages/about/pageAbout.css");
 @import url("./pages/contact/pageContact.css");
 @import url("./pages/galery/pageGalery.css");
 
 @font-face {
   font-family: "kothe";
-  src: url("../fonts/Koch\ Fraktur.ttf");
+  src: url("../../public/assets/fonts/Koch\ Fraktur.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 :root {
@@ -71,4 +77,94 @@ footer {
   width: 100%;
   height: 40rem;
   background-color: var(--background-color);
+}
+
+.title {
+  font-size: var(--title);
+  font-family: var(--custon-font);
+  color: var(--color-primary);
+}
+.subtitle {
+  font-size: var(--sub-title);
+  color: var(--color-primary);
+  margin-left: 3rem;
+}
+.paragraph {
+  color: var(--text-color);
+  font-size: var(--paragraph);
+  line-height: 1.4;
+}
+
+.subtitle-ornament {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 2rem;
+  margin: 3rem 0;
+}
+
+.subtitle-ornament::after {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  z-index: 1;
+
+  width: 4px;
+  height: 100%;
+  background-color: var(--color-primary);
+}
+#professional-name {
+  font-size: var(--professional-name);
+  font-family: var(--custon-font);
+  color: var(--text-color);
+}
+#professional-details {
+  font-size: var(--details);
+  color: var(--text-color);
+  color: var(--color-secondary);
+}
+button {
+  height: 5rem;
+
+  font-size: var(--button-font-size);
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+
+  & a {
+    color: var(--text-color);
+  }
+}
+
+.container-backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.backToTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-tertiary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.arrow {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  p {
+    max-width: 90%;
+  }
 }

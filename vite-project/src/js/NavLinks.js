@@ -32,12 +32,12 @@ export function initNavLinks() {
     {
       href: "https://www.facebook.com/suaempresa",
       text: "Facebook",
-      imgSrc: "../src/images/icons/facebook.svg",
+      imgSrc: "./public/assets/images/facebook.svg",
     },
     {
       href: "https://www.instagram.com/suainstagram",
       text: "Instagram",
-      imgSrc: "../src/images/icons/instagram.svg",
+      imgSrc: "./public/assets/images/instagram.svg",
     },
   ];
   const div = document.createElement("div");
@@ -66,6 +66,7 @@ export function initNavLinks() {
       event.preventDefault();
       document.querySelector("nav").classList.remove("active");
       document.querySelector("header").classList.remove("header-active");
+      document.getElementById("menu-bar").classList.remove("change");
     });
   });
 
@@ -81,9 +82,10 @@ export function initNavLinks() {
     }
   });
 }
-const hamburgerMenu = document.querySelector(".hamburger-menu");
+const hamburgerMenu = document.querySelector("#menu-bar");
 
 hamburgerMenu.addEventListener("click", function () {
   document.querySelector("nav").classList.toggle("active");
   document.querySelector("header").classList.toggle("header-active");
+  document.getElementById("menu-bar").classList.toggle("change");
 });

@@ -1,0 +1,146 @@
+header {
+  width: 98%;
+  position: fixed;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+#navigation {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--link-font-size);
+}
+.logo {
+  height: 80%;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+  transition: 0.3s ease;
+}
+
+a {
+  color: var(--text-color);
+}
+a:hover {
+  color: var(--color-primary);
+}
+.social-box {
+  height: 100%;
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.social-box a {
+  width: auto;
+  height: 2rem;
+}
+
+.social-box a img {
+  width: 2rem;
+}
+
+.social-links {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  width: auto;
+  height: 2rem;
+}
+
+.social-links a img {
+  width: 2rem;
+  margin: 0 10px;
+}
+
+#menu-bar {
+  width: 40px;
+  cursor: pointer;
+
+  display: none;
+  flex-direction: column;
+  gap: 0.1rem;
+  justify-content: space-around;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: var(--text-color);
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+header.scrolled-header {
+  background-color: var(--background-color);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.header-active {
+  background-color: var(--background-color);
+}
+#navigation .active {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 5rem 5rem 0 0;
+  width: 80%;
+  height: 100vh;
+  background-color: var(--background-color);
+  z-index: 2000;
+  font-size: 4rem;
+  transition: 0.3s ease;
+}
+
+.change {
+  display: block;
+}
+
+.change .bar {
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotateZ(45deg);
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+  }
+  .social-links {
+    display: none;
+  }
+}

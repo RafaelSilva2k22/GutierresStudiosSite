@@ -1,6 +1,9 @@
 export default function renderAbout() {
   return `
-      <h1>Sobre</h1>
-      <p>Aqui você pode encontrar informações sobre a aplicação.</p>
+  <div class="content">
+      <div id="page-about">
+        <h1>PAGINA SOBRE CONSTRUÇÃO</h1>
+      <div>
+  </div>
     `;
 }

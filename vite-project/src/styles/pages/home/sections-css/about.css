@@ -1,0 +1,58 @@
+.about {
+  width: 98%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about-content {
+  width: 45%;
+  min-width: 35.6rem;
+  display: flex;
+  align-items: center;
+}
+.image-content {
+  width: 45%;
+  min-width: 35.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-decoration {
+  width: 50%;
+  min-width: 200px;
+  max-width: 400px;
+  aspect-ratio: 9/14;
+
+  position: relative;
+
+  border: 2px solid var(--text-color);
+}
+
+#artist-image {
+  width: 100%;
+  aspect-ratio: 9/14;
+
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-image: url(https://images.unsplash.com/photo-1485463598028-44d6c47bf23f?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    width: 50%;
+  }
+  .image-content {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    width: 90%;
+  }
+}

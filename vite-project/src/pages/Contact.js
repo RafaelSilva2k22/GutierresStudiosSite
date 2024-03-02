@@ -1,6 +1,9 @@
 export default function renderContact() {
   return `
-      <h1>Contato</h1>
-      <p>Use esta página para entrar em contato conosco.</p>
+  <div class="content">
+      <div id="page-about">
+        <h1>PAGINA  DE CONTATO EM CONSTRUÇÃO</h1>
+      <div>
+  </div>
     `;
 }
